@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Stupid Vids</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="main-title">Stupid Vids</h1>
+    <div class="video-container">
+      <video controls>
+        <source src="https://youtu.be/gQtWzUid2dY" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <button class="next-button" onclick="nextVideo()">Next Video</button>
+  </div>
+  
+  <script>
+    function nextVideo() {
+      // Replace with the actual URL of the next video
+      window.location.href = 'next_video_url.html';
+    }
+  </script>
+</body>
+
+</html>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+}
+
+.main-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.next-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.next-button:hover {
+  background-color: #0056b3;
+}
